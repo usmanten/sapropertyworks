@@ -128,6 +128,13 @@ function Index() {
         </div>
       </header>
 
+      {/* SLOGAN BAR */}
+      <div className="bg-brand text-brand-foreground border-b-2 border-ink">
+        <div className="max-w-7xl mx-auto px-6 py-2.5 text-center font-display uppercase text-[11px] sm:text-sm tracking-wider">
+          "Jack of all trades, master of none — but most of the time better than master of one."
+        </div>
+      </div>
+
       {/* HERO */}
       <section id="top" className="border-b border-black">
         <div className="max-w-7xl mx-auto px-6 pt-16 pb-20 sm:pt-24 sm:pb-28 grid lg:grid-cols-12 gap-10 items-end">
