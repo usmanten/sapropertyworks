@@ -51,7 +51,17 @@ const slides = [
 ];
 
 const OWNER_TEL = "+447852164275";
-const WORKER_TEL = "+447460197195";
+const OWNER_WA = "447852164275"; // wa.me format (no +)
+
+function buildWhatsAppLink(name: string, phone: string, postcode: string, details: string) {
+  const msg =
+    `*New Quote Request — S A Decorating*\n\n` +
+    `*Name:* ${name}\n` +
+    `*Phone:* ${phone}\n` +
+    `*Postcode:* ${postcode}\n\n` +
+    `*Job details:*\n${details}`;
+  return `https://wa.me/${OWNER_WA}?text=${encodeURIComponent(msg)}`;
+}
 
 function Slideshow() {
   const [i, setI] = useState(0);
