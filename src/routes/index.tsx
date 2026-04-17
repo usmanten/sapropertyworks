@@ -110,6 +110,83 @@ function Slideshow() {
   );
 }
 
+function QuoteForm() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [postcode, setPostcode] = useState("");
+  const [details, setDetails] = useState("");
+
+  return (
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        const url = buildWhatsAppLink(name.trim(), phone.trim(), postcode.trim(), details.trim());
+        window.open(url, "_blank", "noopener,noreferrer");
+      }}
+      className="bg-background text-ink p-8 sm:p-10 border-2 border-ink space-y-5"
+    >
+      <h3 className="font-display uppercase text-2xl">Request a free quote</h3>
+      <p className="text-sm text-ink/70 -mt-2">
+        Sends straight to the owner's WhatsApp — fastest reply.
+      </p>
+      <div>
+        <label className="font-display uppercase text-xs tracking-wider block mb-2">Name</label>
+        <input
+          required
+          maxLength={80}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          className="w-full border-2 border-ink px-4 py-3 font-medium focus:outline-none focus:bg-brand/10"
+        />
+      </div>
+      <div className="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label className="font-display uppercase text-xs tracking-wider block mb-2">Phone</label>
+          <input
+            type="tel"
+            required
+            maxLength={20}
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className="w-full border-2 border-ink px-4 py-3 font-medium focus:outline-none focus:bg-brand/10"
+          />
+        </div>
+        <div>
+          <label className="font-display uppercase text-xs tracking-wider block mb-2">
+            Postcode
+          </label>
+          <input
+            required
+            maxLength={12}
+            value={postcode}
+            onChange={(e) => setPostcode(e.target.value)}
+            className="w-full border-2 border-ink px-4 py-3 font-medium focus:outline-none focus:bg-brand/10"
+          />
+        </div>
+      </div>
+      <div>
+        <label className="font-display uppercase text-xs tracking-wider block mb-2">
+          Tell us about the job
+        </label>
+        <textarea
+          rows={4}
+          required
+          maxLength={1000}
+          value={details}
+          onChange={(e) => setDetails(e.target.value)}
+          className="w-full border-2 border-ink px-4 py-3 font-medium focus:outline-none focus:bg-brand/10 resize-none"
+        />
+      </div>
+      <button
+        type="submit"
+        className="w-full font-display uppercase text-lg bg-ink text-background py-5 hover:bg-brand transition-colors flex items-center justify-center gap-2"
+      >
+        💬 Send via WhatsApp →
+      </button>
+    </form>
+  );
+}
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-ink font-sans">
