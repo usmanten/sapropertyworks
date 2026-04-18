@@ -28,13 +28,15 @@ export const Route = createFileRoute("/")({
 
 const services = [
   { title: "Painting & Decorating", desc: "Flawless finishes, inside and out." },
-  { title: "Kitchen Fitting", desc: "Full installs, from rip-out to reveal." },
-  { title: "Bathroom Fitting", desc: "Tiling, plumbing, the lot." },
-  { title: "Flooring", desc: "Laminate, vinyl, lino, hardwood." },
-  { title: "Loft Conversions", desc: "Storage spaces, fully insulated." },
-  { title: "Plumbing & Electrics", desc: "Reliable repairs and upgrades." },
-  { title: "Tiling", desc: "Walls, floors, splashbacks." },
-  { title: "Joinery", desc: "Custom carpentry, built to last." },
+  { title: "Kitchen Fitting", desc: "3D Designs, Full Installs from ripout to reveals" },
+  { title: "Bathroom Fitting", desc: "3D Designs, Full Installs from ripout to reveals" },
+  { title: "Flooring", desc: "Laminate, Carpets Tiling, Vinyl, LVT & Engineered Wood" },
+  { title: "Loft Conversion", desc: "Access ladder installation, Fully insulated & Create storage spaces" },
+  { title: "Electrics", desc: "1st Fix, 2nd Fix, Repairs & Upgrades" },
+  { title: "Plumbing", desc: "1st Fix, 2nd Fix, Repairs & Upgrades" },
+  { title: "Tiling", desc: "Walls, Flooring & Splashbacks" },
+  { title: "Joinery", desc: "Door hanging, Handle/lock installations, skirting & Architrave installations" },
+  { title: "Maintenance", desc: "Regular maintenance works, end of tenancy inspections & Repair works carried out" },
 ];
 
 const slides = [
